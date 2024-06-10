@@ -7,6 +7,11 @@ $ pip install handle-scanned-pdf
 ```
 ---
 
+Only if required set the below path to Tesseract executable:
+```python
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract/tesseract.exe'
+```
+
 Tesseract-OCR supports:
 - Various image types including (but not limited to) jpeg, png, gif, bmp, tiff.
 - Wide range of languages [list of languages](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)
