@@ -19,9 +19,9 @@ Installation on Linux:
 $ apt install tesseract-ocr-<language-code>
 ```
 
-Download for Windows (set path to the downloaded OCR): 
--[Download language files](https://github.com/tesseract-ocr/tessdata/tree/3.04.00)
--Add the folder that contains the downloaded files into the System Path Variables as TESSDATA_PREFIX
+Download for Windows (set path to the downloaded OCR):
+- [Download language files](https://github.com/tesseract-ocr/tessdata/tree/3.04.00)
+- Add the folder that contains the downloaded files into the System Path Variables as TESSDATA_PREFIX
 
 ###### Packages Required (src: requirements.txt):
 ```bash
