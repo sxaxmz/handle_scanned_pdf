@@ -5,12 +5,18 @@ Tesseract-OCR supports:
 - Various image types including (but not limited to) jpeg, png, gif, bmp, tiff.
 - Wide range of languages [list of languages](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)
 
+###### Server Installation
+```console
+$ apt install tesseract-ocr
+$ apt-get install poppler-utils
+```
+
 ###### Language Support
 Ensure to download the right Tesseract-OCR for the language needed to be used.
 
 Installation on Linux:
 ```
-!apt install tesseract-ocr-<language-code>
+$ apt install tesseract-ocr-<language-code>
 ```
 
 Download for Windows (set path to the downloaded OCR): 
