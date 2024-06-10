@@ -1,6 +1,12 @@
 # handle_scanned_pdf
 A wrapper on top of the Python-OCR tool pytesseract, that utilizes Google’s Tesseract-OCR Engine to recognize and extract text embedded in images.
 
+Install the package using:
+```console
+$ pip install handle-scanned-pdf
+```
+---
+
 Tesseract-OCR supports:
 - Various image types including (but not limited to) jpeg, png, gif, bmp, tiff.
 - Wide range of languages [list of languages](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)
