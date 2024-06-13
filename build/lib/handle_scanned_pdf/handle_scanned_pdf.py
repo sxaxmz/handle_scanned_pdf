@@ -89,7 +89,7 @@ def scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_
   f = open(pdf_searchable_file, "a+b")
   files = glob.glob(os.path.join(file_out_path, "*.{}".format(image_converted_format))) #os.listdir(file_out_path)
   files.sort()
-  raw_pdf = [pytesseract.image_to_pdf_or_hocr(img_file) for img_file in files]
+  raw_pdf = [pytesseract.image_to_pdf_or_hocr(img_file, lang=lang_code) for img_file in files]
   pdf_writer = PdfWriter()
   for z, pg in enumerate(raw_pdf):
     pdf = PdfReader(io.BytesIO(pg))
