@@ -1,6 +1,8 @@
 # handle_scanned_pdf
 A wrapper on top of the Python-OCR tool pytesseract, that utilizes Google’s Tesseract-OCR Engine to recognize and extract text embedded in images.
 
+Source code can be accessed here [sxaxmz/handdle_scanned_pdf](https://github.com/sxaxmz/handle_scanned_pdf)
+
 Install the package using:
 ```console
 $ pip install handle-scanned-pdf
