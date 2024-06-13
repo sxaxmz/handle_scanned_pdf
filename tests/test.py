@@ -1,4 +1,6 @@
-from .handle_scanned_pdf import get_pdf_text, get_pdf_text_bulk_pdf, draw_bounding_boxes, scanned_pdf_to_text_searchable_pdf, scanned_pdf_to_text_searchable_pdf_bulk
+# pip install handle-scanned-pdf
+
+from handle_scanned_pdf import get_pdf_text, get_pdf_text_bulk_pdf, draw_bounding_boxes, scanned_pdf_to_text_searchable_pdf, scanned_pdf_to_text_searchable_pdf_bulk
 import numpy as np
 import os, cv2
 
