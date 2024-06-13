@@ -20,6 +20,7 @@ def get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, draw_boxes=Tr
       if not file.lower().endswith('.pdf'):
               continue
       file_path = os.path.join(pdf_path, file)
+      file_name = os.path.basename(file_path)
       out_path = os.path.join(output_path, file)
       pages = convert_from_path(file_path, 500)
       with open(f'{out_path.replace(".pdf", ".txt")}', 'w') as the_file:  # write mode, coz one time
