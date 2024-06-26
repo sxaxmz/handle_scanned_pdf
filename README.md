@@ -1,5 +1,5 @@
 # handle_scanned_pdf
-A wrapper on top of the Python-OCR tool pytesseract, that utilizes Google’s Tesseract-OCR Engine to recognize and extract text embedded in images.
+A wrapper on top of python-OCR tools such as pytesseract and easyocr, to recognize and extract text embedded in images.
 
 Source code can be accessed here [sxaxmz/handdle_scanned_pdf](https://github.com/sxaxmz/handle_scanned_pdf)
 
@@ -7,25 +7,49 @@ Install the package using:
 ```console
 $ pip install handle-scanned-pdf
 ```
+[![Downloads](https://static.pepy.tech/badge/handle_scanned_pdf)](https://pepy.tech/project/handle_scanned_pdf) [![Downloads](https://static.pepy.tech/badge/handle_scanned_pdf/week)](https://pepy.tech/project/handle_scanned_pdf)
+
 ---
+
+Features:
+- Convert scanned-PDFs to text searchable PDFs.
+- Extract text from scanned PDFs and images.
+- Draw bounding boxes around the text that can be extracted on scanned PDFs and images.
+
+Usage:
+- Make scanned documents searchable and parsable.
+- Helpful in digitizing archives.
+- Make use of scanned documents and images when it's intended to be used for RAG applications.
+
+---
+
+##### Tesseract-OCR supports:
+- Various image types including (but not limited to) jpeg, png, gif, bmp, tiff.
+- Wide range of languages [list of languages](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)
+- Supports reading more than 1 language at a time.
+
+Server Installation
+```console
+$ apt install tesseract-ocr
+$ apt-get install poppler-utils
+```
 
 Only if required set the below path to Tesseract executable:
 ```python
 pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract/tesseract.exe'
 ```
 
-Tesseract-OCR supports:
-- Various image types including (but not limited to) jpeg, png, gif, bmp, tiff.
-- Wide range of languages [list of languages](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)
+##### EasyOCR supports:
+- Does not require server installation.
+- Supports reading more than 1 language at a time.
+- Performes faster on a GPU.
+- List of [supported language code](https://www.jaided.ai/easyocr/).
 
-##### Server Installation
-```console
-$ apt install tesseract-ocr
-$ apt-get install poppler-utils
-```
 
 ##### Language Support
-Ensure to download the right Tesseract-OCR for the language needed to be used.
+
+###### Tesseract
+- Ensure to download the right Tesseract-OCR for the language needed to be used.
 
 Installation on Linux:
 ```
@@ -35,6 +59,19 @@ $ apt install tesseract-ocr-<language-code>
 Download for Windows (set path to the downloaded OCR):
 - [Download language files](https://github.com/tesseract-ocr/tessdata/tree/3.04.00)
 - Add the folder that contains the downloaded files into the System Path Variables as TESSDATA_PREFIX
+
+Defining the language codes for Tesseract:
+```Python
+lang_code = "eng+ara"
+txt_extract_lang_code = "eng+ara"
+```
+
+###### EasyOCR
+Defining the language codes for EasyOCR:
+```Python
+lang_code = ["en","ar"]
+txt_extract_lang_code = ["en","ar"]
+```
 
 ##### Packages Required (src: requirements.txt):
 ```bash
@@ -164,5 +201,7 @@ scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img,
 - [tesseract-ocr](https://tesseract-ocr.github.io)
 - [Data Camp Pytesseract Guide](https://www.datacamp.com/tutorial/optical-character-recognition-ocr-in-python-with-pytesseract)
 - [Support Other Languages On Windows](https://stackoverflow.com/a/46145156/7316214)
+- [EasyOCR](https://www.jaided.ai/easyocr/documentation/)
+- [ReportLab](https://docs.reportlab.com/)
 
 
