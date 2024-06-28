@@ -12,7 +12,7 @@ $ pip install handle-scanned-pdf
 ---
 
 Features:
-- Convert scanned-PDFs to text searchable PDFs.
+- Convert scanned-PDFs to text searchable PDFs (end-to-end).
 - Extract text from scanned PDFs and images.
 - Draw bounding boxes around the text that can be extracted on scanned PDFs and images.
 
