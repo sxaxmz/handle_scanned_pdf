@@ -5,11 +5,14 @@ import numpy as np
 import os, cv2
 
 # Get text in Bulk from Multiple PDF files
+
 pdf_folder_path = 'pdf_files'
 output_path = 'output'
-lang_code = 'ara'
 draw_boxes = True
-get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, draw_boxes)
+lang_code = ['en'] # 'eng'
+ocr_used = 'easyocr' # 'tesseract'
+lang_rtl = True
+get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, ocr_used, lang_rtl, draw_boxes)
 
 '''
 {'number_of_files': 1,
@@ -22,11 +25,13 @@ get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, draw_boxes)
 '''
 
 # Get text from single PDF file
-pdf_path_ = 'sample_.pdf'
+pdf_path_ = 'pdf_files/sample_.pdf'
 output_path = 'output'
-lang_code = 'ara'
 draw_boxes = True
-get_pdf_text(pdf_path_, output_path, lang_code, draw_boxes)
+lang_code = ['ar', 'en'] # 'ara+eng'
+ocr_used = 'easyocr' # 'tesseract'
+lang_rtl = True
+get_pdf_text(pdf_path_, output_path, lang_code, ocr_used, lang_rtl, draw_boxes)
 
 '''
 {'bounding_img_path': ['output/images_bounding/pdf_bounding_images/text_with_boxes_pdf_0.jpg',
@@ -53,11 +58,19 @@ output/images_bounding/3ba4c1f1-775f-4e05-ab48-a40617087a57-1_bounding_images/te
 file_pdf = 'sample_.pdf'
 output_folder_path_img = 'img'
 output_path = 'output'
-lang_code = 'ara'
+lang_code = ['ar', 'en'] #'ara+eng'
 image_converted_format = 'png'
-get_text=True
+ocr_used = 'easyocr' # 'tesseract'
+ocr_used_txt_extraction = 'easyocr' # 'tesseract'
+txt_extract_lang_code = ['ar', 'en'] #'ara+eng'
+font_name = 'Scheherazade'
+font_ttf_path = 'ScheherazadeNew-Regular.ttf'
+font_size = 12
+lang_rtl = True
+non_standard_font = True
+get_text=False
 draw_boxes=False
-scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_path, lang_code, image_converted_format, get_text, draw_boxes)
+scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_path, lang_code, ocr_used, ocr_used_txt_extraction, txt_extract_lang_code, font_name, font_ttf_path, font_size, lang_rtl, non_standard_font, image_converted_format, get_text, draw_boxes)
 
 '''
 {'file_name': 'sample_',
@@ -72,11 +85,19 @@ scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_path
 pdf_folder_path = 'pdf_files'
 output_folder_path_img = 'img'
 output_path = 'output'
-lang_code = 'ara'
+lang_code = ['ar', 'en'] #'ara+eng'
 image_converted_format = 'png'
+ocr_used = 'easyocr' # 'tesseract'
+ocr_used_txt_extraction = 'easyocr' # 'tesseract'
+txt_extract_lang_code = ['ar', 'en'] #'ara+eng'
+font_name = 'Scheherazade'
+font_path = 'ScheherazadeNew-Regular.ttf'
+font_size = 12
+lang_rtl = True
+non_standard_font = True
 get_text=True
 draw_boxes=False
-scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img, output_path, lang_code, image_converted_format, get_text, draw_boxes)
+scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img, output_path, lang_code, ocr_used_txt_extraction, txt_extract_lang_code, font_name, font_ttf_path, font_size, lang_rtl, non_standard_font, image_converted_format, get_text, draw_boxes)
 
 '''
 {'number_files_converted': 1,
