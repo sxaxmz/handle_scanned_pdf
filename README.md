@@ -111,9 +111,12 @@ from handle_scanned_pdf import get_pdf_text_bulk_pdf
 
 pdf_folder_path = 'pdf_files'
 output_path = 'output'
-lang_code = 'ara'
 draw_boxes = True
-get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, draw_boxes)
+lang_code = ['en'] # 'eng'
+ocr_used = 'easyocr' # 'tesseract'
+lang_rtl = True
+get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, ocr_used, lang_rtl, draw_boxes)
+
 ```
 
 ###### Output:
@@ -131,11 +134,14 @@ get_pdf_text_bulk_pdf(pdf_folder_path, output_path, lang_code, draw_boxes)
 ```python
 from handle_scanned_pdf import get_pdf_text
 
-pdf_path_ = 'sample_.pdf'
+pdf_path_ = 'pdf_files/sample_.pdf'
 output_path = 'output'
-lang_code = 'ara'
 draw_boxes = True
-get_pdf_text(pdf_path_, output_path, lang_code, draw_boxes)
+lang_code = ['ar', 'en'] # 'ara+eng'
+ocr_used = 'easyocr' # 'tesseract'
+lang_rtl = True
+get_pdf_text(pdf_path_, output_path, lang_code, ocr_used, lang_rtl, draw_boxes)
+
 ```
 
 ###### Output:
@@ -155,11 +161,20 @@ from handle_scanned_pdf import scanned_pdf_to_text_searchable_pdf
 file_pdf = 'sample_.pdf'
 output_folder_path_img = 'img'
 output_path = 'output'
-lang_code = 'ara'
-image_converted_format = 'png
-get_text=True
+lang_code = ['ar', 'en'] #'ara+eng'
+image_converted_format = 'png'
+ocr_used = 'easyocr' # 'tesseract'
+ocr_used_txt_extraction = 'easyocr' # 'tesseract'
+txt_extract_lang_code = ['ar', 'en'] #'ara+eng'
+font_name = 'Scheherazade'
+font_ttf_path = 'ScheherazadeNew-Regular.ttf'
+font_size = 12
+lang_rtl = True
+non_standard_font = True
+get_text=False
 draw_boxes=False
-scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_path, lang_code, image_converted_format, get_text, draw_boxes)
+scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_path, lang_code, ocr_used, ocr_used_txt_extraction, txt_extract_lang_code, font_name, font_ttf_path, font_size, lang_rtl, non_standard_font, image_converted_format, get_text, draw_boxes)
+
 ```
 
 ###### Output:
@@ -174,14 +189,25 @@ scanned_pdf_to_text_searchable_pdf(file_pdf, output_folder_path_img, output_path
 
 #### Extract text, draw bounding boxes, and convert PDF file to text searchable PDF in Bulk
 ```python
+from handle_scanned_pdf import scanned_pdf_to_text_searchable_pdf_bulk
+
 pdf_folder_path = 'pdf_files'
 output_folder_path_img = 'img'
 output_path = 'output'
-lang_code = 'ara'
+lang_code = ['ar', 'en'] #'ara+eng'
 image_converted_format = 'png'
+ocr_used = 'easyocr' # 'tesseract'
+ocr_used_txt_extraction = 'easyocr' # 'tesseract'
+txt_extract_lang_code = ['ar', 'en'] #'ara+eng'
+font_name = 'Scheherazade'
+font_path = 'ScheherazadeNew-Regular.ttf'
+font_size = 12
+lang_rtl = True
+non_standard_font = True
 get_text=True
 draw_boxes=False
-scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img, output_path, lang_code, image_converted_format, get_text, draw_boxes)
+scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img, output_path, lang_code, ocr_used_txt_extraction, txt_extract_lang_code, font_name, font_ttf_path, font_size, lang_rtl, non_standard_font, image_converted_format, get_text, draw_boxes)
+
 ```
 
 ###### Output:
