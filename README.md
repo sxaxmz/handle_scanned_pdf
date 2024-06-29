@@ -15,11 +15,17 @@ Features:
 - Convert scanned-PDFs to text searchable PDFs (end-to-end).
 - Extract text from scanned PDFs and images.
 - Draw bounding boxes around the text that can be extracted on scanned PDFs and images.
+- Recognize and extract text in various languages.
+- The searchable PDF output places the extracted text and position it accordingly on-top of the inputted file.
 
 Usage:
 - Make scanned documents searchable and parsable.
 - Helpful in digitizing archives.
 - Make use of scanned documents and images when it's intended to be used for RAG applications.
+
+Challenges:
+- OCR performance and accuracy may vary based on the type of inputted data.
+- The text position on the custom searchable PDF creation (using easyocr) might not be 100% accurate as it takes the mean of top-right and bottom-right to produce x and y.
 
 ---
 
