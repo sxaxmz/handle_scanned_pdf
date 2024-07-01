@@ -212,7 +212,7 @@ lang_rtl = True
 non_standard_font = True
 get_text=True
 draw_boxes=False
-scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img, output_path, lang_code, ocr_used_txt_extraction, txt_extract_lang_code, font_name, font_ttf_path, font_size, lang_rtl, non_standard_font, image_converted_format, get_text, draw_boxes)
+scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img, output_path, lang_code, ocr_used, ocr_used_txt_extraction, txt_extract_lang_code, font_name, font_path, font_size, lang_rtl, non_standard_font, image_converted_format, get_text, draw_boxes)
 
 ```
 
