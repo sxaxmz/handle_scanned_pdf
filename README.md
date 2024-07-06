@@ -1,5 +1,5 @@
 # handle_scanned_pdf
-A wrapper on top of python-OCR tools such as pytesseract and easyocr, to recognize and extract text embedded in images.
+A wrapper on top of python-OCR tools such as pytesseract and easyocr, to recognize and extract text embedded in images. The first open-source wrapper package that converts scanned PDF files to searchable PDF files (end-to-end) facilitates using EasyrOCR and tesseract OCR.
 
 Source code can be accessed here [sxaxmz/handdle_scanned_pdf](https://github.com/sxaxmz/handle_scanned_pdf)
 
@@ -36,6 +36,8 @@ Challenges:
 - The text position on the custom searchable PDF creation (using easyocr) might not be 100% accurate as it takes the mean of top-right and bottom-right to produce x and y.
 
 ![Input_Output_Breakdown](img/handle_scanned_pdf.drawio.png)
+
+Feel Free to contribute to this repository.
 
 ---
 
