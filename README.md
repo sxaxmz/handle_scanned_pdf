@@ -7,6 +7,12 @@ Install the package using:
 ```console
 $ pip install handle-scanned-pdf
 ```
+
+Server Installation
+```console
+$ apt-get install poppler-utils
+```
+
 [![Downloads](https://static.pepy.tech/badge/handle_scanned_pdf)](https://pepy.tech/project/handle_scanned_pdf) [![Downloads](https://static.pepy.tech/badge/handle_scanned_pdf/week)](https://pepy.tech/project/handle_scanned_pdf)
 
 ---
@@ -17,6 +23,8 @@ Features:
 - Draw bounding boxes around the text that can be extracted on scanned PDFs and images.
 - Recognize and extract text in various languages.
 - The searchable PDF output places the extracted text and position it accordingly on-top of the inputted file.
+- Ability to use one OCR to create a searchable PDF and a different OCR to extract text files (separately).
+- If it is only desired to use EasyOCR, then tesseract installation is not required.
 
 Usage:
 - Make scanned documents searchable and parsable.
@@ -26,6 +34,8 @@ Usage:
 Challenges:
 - OCR performance and accuracy may vary based on the type of inputted data.
 - The text position on the custom searchable PDF creation (using easyocr) might not be 100% accurate as it takes the mean of top-right and bottom-right to produce x and y.
+
+![Input_Output_Breakdown](img/handle_scanned_pdf.drawio.png)
 
 ---
 
@@ -37,7 +47,6 @@ Challenges:
 Server Installation
 ```console
 $ apt install tesseract-ocr
-$ apt-get install poppler-utils
 ```
 
 Only if required set the below path to Tesseract executable:
@@ -227,6 +236,13 @@ scanned_pdf_to_text_searchable_pdf_bulk(pdf_folder_path, output_folder_path_img,
     'txt_file_path': 'output/sample_.txt'}}]}
 ```
 
+---
+
+## EasyOCR Searchable PDF Output Sample
+
+![EasyOCR Searchable Output Sample](img/easyOCR_searchable_pdf_output.png)
+
+---
 
 ## References:
 - [pytesseract package](https://pypi.org/project/pytesseract/)
