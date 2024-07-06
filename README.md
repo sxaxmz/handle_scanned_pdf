@@ -22,9 +22,9 @@ Features:
 - Extract text from scanned PDFs and images.
 - Draw bounding boxes around the text that can be extracted on scanned PDFs and images.
 - Recognize and extract text in various languages.
-- The searchable PDF output places the extracted text and position it accordingly on-top of the inputted file.
+- The searchable PDF output places the extracted text and positions it accordingly on top of the inputted file.
 - Ability to use one OCR to create a searchable PDF and a different OCR to extract text files (separately).
-- If it is only desired to use EasyOCR, then tesseract installation is not required.
+- If it is only desired to use EasyOCR, then Tesseract installation is not required.
 
 Usage:
 - Make scanned documents searchable and parsable.
@@ -33,7 +33,7 @@ Usage:
 
 Challenges:
 - OCR performance and accuracy may vary based on the type of inputted data.
-- The text position on the custom searchable PDF creation (using easyocr) might not be 100% accurate as it takes the mean of top-right and bottom-right to produce x and y.
+- The text position on the custom searchable PDF created (using easyocr) might not be 100% accurate as it takes the mean of top-right and bottom-right to produce x and y.
 
 ![Input_Output_Breakdown](img/handle_scanned_pdf.drawio.png)
 
